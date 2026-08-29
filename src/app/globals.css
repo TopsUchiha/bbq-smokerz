@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ember: #f47018;
+    --color-coal: #181818;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #181818;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #f47018;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-ember text-white font-display font-semibold tracking-wider uppercase text-sm px-6 py-3 transition-colors hover:bg-ember-600 focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-offset-2 focus-visible:ring-offset-coal-950;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-white/30 text-white font-display font-semibold tracking-wider uppercase text-sm px-6 py-3 transition-colors hover:border-white hover:bg-white/10;
+  }
+
+  .section-label {
+    @apply text-ember font-display tracking-[0.2em] uppercase text-sm font-medium;
+  }
+
+  .section-title {
+    @apply font-display font-bold text-white tracking-wide;
+  }
+
+  .card {
+    @apply bg-coal-900 border border-coal-800;
+  }
+
+  .admin-input {
+    @apply w-full bg-coal-900 border border-coal-700 text-white px-3 py-2 text-sm focus:outline-none focus:border-ember placeholder:text-coal-500;
+  }
+
+  .admin-label {
+    @apply block text-sm font-medium text-coal-300 mb-1;
+  }
+}
